@@ -124,7 +124,7 @@ static int sim_malus_test(int n_pol)
   if (err)
     printf("  FAIL(%d/%d)\n\n", err, n_pol);     // print count of errors
   else
-    printf("  SUCCESS\n\n", n_pol);
+    printf("  SUCCESS\n\n");
   return !err;                                   // return result, 1 if ok
 }
 
@@ -201,7 +201,7 @@ static int test_user_angles(int nb, double *list_deg)
   return sim_malus_test(nb);
 }
 
-// accuracy test using 91 polarizers step 1° [0..90]
+// accuracy test using 91 polarizers step 1Â° [0..90]
 // https://www.youtube.com/watch?v=S-ZEWGdGmak
 // result is 0.486..
 static void test_90p(void)
