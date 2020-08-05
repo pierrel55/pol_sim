@@ -50,24 +50,27 @@ With r1 and r2 being the results returned by each polarizer, we can define the v
 
 Here are 3 programs to test the function.
 
-#####correl_QM.C
+#### correl_QM.C
+
 This program simulates a source of entangled photons and performs correlation measurements for angle differences between polarizers from 0 to 90 ° in steps of 5 degrees.
 It selects pairs containing photons in identical states using the test described above.
 Using these pairs it measures the correlation rates of coincidences and compares them with the theoretical results predicted by the QM.
 As a reminder, these are cos²(a_diff) and sin²(a_diff) for the detection correlations ++/-- and +-/-+.
 
-#####correl_MT.C
+#### correl_MT.C
+
 This program is identical to the previous one, but simulates two sources of independent polarized photons.
 It then uses all the pairs detected, and compares the correlation measurements with those predicted for non-entangled photons.
 These are 0.25 + 0.5*cos²(a_diff) and 0.25 + 0.5*sin²(a_diff)
 
-#####malus_check.c
+#### malus_check.c
+
 This program allow to verify compliance with Malus law by calculating the rate of photons transmitted as a function of the angle between the polarizers.
 It simulate a random number of aligned polarizers and checks the final transmission intensity.
 Another test evaluating accuracy is performed by aligning 91 polarizers.
 This show that the output directions chosen by the polarizer function are precise.
 
-####Compilation:
+#### Compilation:
 
 ------------
 
