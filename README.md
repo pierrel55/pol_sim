@@ -1,9 +1,9 @@
 # pol_sim
 Simulation of a polarizer
 
-This project is a local realistic approach for explaining EPR correlations using local hidden variables.
+This project presents a local realistic approach attempting to explain EPR correlations using local hidden variables.
 
-It uses a function to simulate the behaviour of a polarizer using a logical approach, rather than a simulation of physical laws.
+It uses a function to simulate the behaviour of a polarizer in a logical form, rather than a simulation of physical laws.
 
 The result returned by this function can be used to:
 
@@ -46,9 +46,9 @@ With r1 and r2 being the results returned by each polarizer, we can define the v
 > c = (r1 ^ r2) & 2
 
   - if c = 0   => pair is QM correlated.
-  - if c = 2   =>pair is not QM correlated.
+  - if c = 2   => pair is not QM correlated.
 
-Here are 3 programs to test the function.
+There are three programs to test the function.
 
 #### correl_QM.C
 
