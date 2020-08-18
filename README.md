@@ -32,15 +32,15 @@ With p a structure representing the state of the photon, and containing two loca
 
 The logical form is as follow:
 
-r = ((a >> (RBITS-2)) & 0x2) ^ (0xbb74 >> ((((a + b) >> (RBITS-2)) & 0xc) | ((a >> (RBITS-1)) & 0x2)));
+>   r = ((a >> (RBITS-2)) & 0x2) ^ (0xbb74 >> ((((a + b) >> (RBITS-2)) & 0xc) | ((a >> (RBITS-1)) & 0x2)));
 
 Although it seem complex, it require low compute resources.
 
-a is photon/polarizer polarization angle difference.
-b is a hidden variable attached to photon.
-RBITS is a constant defining count of bits used to define PI
-0xbb74 is a constant defining polarizer logic.
-& | ^ and >> are C language standard boolean operators.
+  - a is photon/polarizer polarization angle difference.
+  - b is a hidden variable attached to photon.
+  - RBITS is a constant defining count of bits used to define PI
+  - 0xbb74 is a constant defining polarizer logic.
+  - & | ^ and >> are C language standard boolean operators.
 
 The function uses the angle of the local polarizer and the two hidden variables of the photon to define the output of the polarizer taken by the photon.
 
