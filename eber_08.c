@@ -1,5 +1,5 @@
 // This program shows that Eberhard inequality can produce negative result with local realistic EPR simulation model without the need to invoke superdeterminism.
-// Hith the model used here, the minimal J/N value can reach an average of -0.08 that represent around 38% of maximal theorical value. (-0.207)
+// With the model used here, the minimal J/N value can reach an average < -0.08 that represent around 38% of maximal theorical value. (-0.207)
 // This code allows to conclude that a negative value of J/N > -0.08 does not allow to prove a non-local interaction.
 
 #include <stdio.h>
@@ -54,7 +54,7 @@ static void emit_photon_pair(struct pho_t *a, struct pho_t *b)
   int _r2 = n_rand();
 
   int r0 = _r0;                                  // random polarisation
-  int r1 = (_r1 + _r2)/2;                        // produce cos² correlations
+  int r1 = (_r1 + 2*_r2)/3;                      // produce exact Malus law
 
   // emit Alice
   a->a = r0;
@@ -203,11 +203,11 @@ struct eb_angles_t
 // array of test angles
 static struct eb_angles_t eb_angles[] = 
 {
-  {  92.72,  61.83,   2.31,  20.43 },
-  { 162.45,  10.35,  72.47,  40.91 },
-  {  83.05,  93.02, 173.52, 134.33 },
-  { 152.42, 127.03,  62.03,  84.38 },
-  { 130.62, 115.55,  40.59,  77.86 },
+  { 176.58, 10.61,  86.65, 64.08 },
+  { 120.76, 96.92,  30.60, 33.14 },
+  {  20.33, 22.02, 110.79, 78.96 },
+  {  53.65, 48.87, 143.63, 17.26 },
+  {  21.85, 30.57, 112.01, 85.85 },
   {  -1, 0, 0, 0 },                              // -1: define end of list
 };
 
@@ -226,5 +226,3 @@ void main(void)
     printf("result: J/N = %.5f\n", res.JoN);
   }
 }
-
-
