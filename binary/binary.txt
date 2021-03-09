@@ -1,0 +1,4 @@
+prebuild binary
+
+epr_gui.exe is ms windows version
+epr_gui_x11 is linux version (64 bits)
