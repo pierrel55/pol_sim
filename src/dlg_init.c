@@ -682,7 +682,7 @@ static void init_widget_list(void)
     wg_progress_bar_set_color(dlg.experiment.run_progress, COL_RGB(125, 160, 220));
     dlg.experiment.but_break        = wg_init_text_button(hw, "Break", text_bt_cb);
     dlg.experiment.but_break->help_text =
-      "This button allow to cancel execution of current running tool.\n";
+      "This button allow to cancel execution of current running tool.";
     wg_init_disable(dlg.experiment.but_break);
 
   // -----------------------------------
@@ -722,12 +722,12 @@ static void init_widget_list(void)
     "In this case the Malus'law must be observed.\n"
     "The ratio on e is the complement. (1 - r)\n"
     "This curve cannot be displayed in QM mode because no emission polarization is defined.";
-  dlg.curves.ref_sin2           = wg_init_check_box(hw, "Ref. sin²"   , check_box_cb_crv);
+  dlg.curves.ref_sin2           = wg_init_check_box(hw, "Ref. sinÂ²"   , check_box_cb_crv);
   dlg.curves.ref_sin2->help_text =
-    "Draw a reference perfect sin² curve. Used to visually compare with simulated curves.";
-  dlg.curves.ref_cos2           = wg_init_check_box(hw, "Ref. cos²"   , check_box_cb_crv);
+    "Draw a reference perfect sinÂ² curve. Used to visually compare with simulated curves.";
+  dlg.curves.ref_cos2           = wg_init_check_box(hw, "Ref. cosÂ²"   , check_box_cb_crv);
   dlg.curves.ref_cos2->help_text =
-    "Draw a reference perfect cos² curve. Used to visually compare with simulated curves.";
+    "Draw a reference perfect cosÂ² curve. Used to visually compare with simulated curves.";
   dlg.curves.ref_triangle       = wg_init_check_box(hw, "Ref. tri."   , check_box_cb_crv);
   dlg.curves.ref_triangle->help_text =
     "Draw a realistic correlations triangle.";
@@ -1884,8 +1884,8 @@ static struct wg_graph_curve crv_det_uu_ratio    = { 0, "undetect uu ratio"    ,
 static struct wg_graph_curve crv_det_acc_ratio   = { 0, "accidentals ratio"    , false, { COL_RGB(  0, 200, 200), COL_RGB(  0, 200, 200) }, {-1, -2 }, 0, PI, 0, sizeof(struct sim_data_t), 1, &sim_result.sim_data_res[0].det_acc_ratio };
 static struct wg_graph_curve crv_transm_alice_o  = { 0, "transmittance Alice"  , false, { COL_RGB(128, 128, 128), COL_RGB(180, 180, 180) }, {-1, -2 }, 0, PI, 0, sizeof(struct sim_data_t), 1, &sim_result.sim_data_res[0].transmit_a };
 static struct wg_graph_curve crv_tr_rel_alice_o  = { 0, "transm. rel Alice"    , false, { COL_RGB(  0, 200,   0), COL_RGB(  0, 250,   0) }, {-1, -2 }, 0, PI, 0, sizeof(struct sim_data_t), 1, &sim_result.sim_data_res[0].tr_rel_ao };
-static struct wg_graph_curve crv_ref_sin2        = { 0, "reference sin²"       , false, { COL_RGB(128, 128, 128), COL_RGB(180, 180, 180) }, { 0,  0 }, 0, PI, 0, sizeof(struct sim_data_t), 3, &sim_result.sim_data_res[0].sin2 };
-static struct wg_graph_curve crv_ref_cos2        = { 0, "reference cos²"       , false, { COL_RGB(128, 128, 128), COL_RGB(180, 180, 180) }, { 0,  0 }, 0, PI, 0, sizeof(struct sim_data_t), 3, &sim_result.sim_data_res[0].cos2 };
+static struct wg_graph_curve crv_ref_sin2        = { 0, "reference sinÂ²"       , false, { COL_RGB(128, 128, 128), COL_RGB(180, 180, 180) }, { 0,  0 }, 0, PI, 0, sizeof(struct sim_data_t), 3, &sim_result.sim_data_res[0].sin2 };
+static struct wg_graph_curve crv_ref_cos2        = { 0, "reference cosÂ²"       , false, { COL_RGB(128, 128, 128), COL_RGB(180, 180, 180) }, { 0,  0 }, 0, PI, 0, sizeof(struct sim_data_t), 3, &sim_result.sim_data_res[0].cos2 };
 static struct wg_graph_curve crv_ref_triangle    = { 0, "reference triangle"   , false, { COL_RGB(128, 128, 128), COL_RGB(180, 180, 180) }, { 0,  0 }, 0, PI, 0, sizeof(struct sim_data_t), 3, &sim_result.sim_data_res[0].triangle };
 static struct wg_graph_curve crv_src_emit_t_dist = { 0, "source emit t dist."  , false, { COL_RGB(128, 128, 128), COL_RGB(180, 180, 180) }, {-1, -2 }, 0, PI, 0, sizeof(struct sim_data_t), 1, &sim_result.sim_data_res[0].src_t_dis };
 
