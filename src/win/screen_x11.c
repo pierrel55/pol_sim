@@ -144,7 +144,7 @@ static void wm_no_borders(Display *x11_disp, Window x11_root_win, Window x11_win
   {
     Atom NET_WMHints[2];
     NET_WMHints[0] = XInternAtom(x11_disp, "_KDE_NET_WM_WINDOW_TYPE_OVERRIDE", True);
-    NET_WMHints[1] = XInternAtom(x11_disp, is_popup ? "_NET_WM_WINDOW_TYPE_POPUP_MENU" : "_NET_WM_WINDOW_TYPE_NORMAL", True);
+    NET_WMHints[1] = XInternAtom(x11_disp, is_popup ? "_NET_WM_WINDOW_TYPE_DOCK" : "_NET_WM_WINDOW_TYPE_NORMAL", True);
     XChangeProperty(x11_disp, x11_win, WM_HINTS, XA_ATOM, 32,
                     PropModeReplace, (unsigned char *)&NET_WMHints, 2);
   }
