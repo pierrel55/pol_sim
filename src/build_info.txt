@@ -1,0 +1,53 @@
+
+-------------------------------------------
+Linux build:
+-------------------------------------------
+
+here is the GCC command line (use copy/paste in a console)
+
+gcc -Wall -O3 -mrdrnd -fms-extensions dlg_ctrl.c dlg_init.c res.c epr/epr_exp.c epr/epr_sim.c epr/ineq.c epr/rng.c epr/sim_local.c epr/sim_qm.c epr/transmit.c win/bitmap.c win/debug.c win/font.c win/widget/wg_cons.c win/widget/wg_edit.c win/widget/wg_graph.c win/widget/wg_mbox.c win/widget/wg_menu.c win/widget/wg_priv.c win/widget/wg_sldr.c win/widget/wg_style.c win/widget/wg_wl.c win/widget/widget.c win/win.c win/screen_x11.c -s -lX11 -lpthread -lm -o epr_gui
+
+
+Possible errors:
+
+message like stdio.h header file not found
+
+=> base GCC compile header not installed (ex: linux mint)
+
+need to be installed with command:
+
+sudo apt-get install build-essential
+
+
+message like X11.h not found
+
+=> GCC X11 header files and library not installed
+
+need to be installed with command:
+
+sudo apt install libx11-dev
+
+
+-------------------------------------------
+GCC mingw
+-------------------------------------------
+
+here is the GCC command line (use copy/paste in a console)
+note: this is same command as linux one except screen_x11.c replaced by screen_ms.c
+
+gcc -Wall -O3 -mrdrnd -fms-extensions dlg_ctrl.c dlg_init.c res.c epr/epr_exp.c epr/epr_sim.c epr/ineq.c epr/rng.c epr/sim_local.c epr/sim_qm.c epr/transmit.c win/bitmap.c win/debug.c win/font.c win/widget/wg_cons.c win/widget/wg_edit.c win/widget/wg_graph.c win/widget/wg_mbox.c win/widget/wg_menu.c win/widget/wg_priv.c win/widget/wg_sldr.c win/widget/wg_style.c win/widget/wg_wl.c win/widget/widget.c win/win.c win/screen_ms.c -s -lgdi32 -lpthread -lm -o epr_gui_x64
+
+note: same command can be used mingw32 and mingw64
+
+
+-------------------------------------------
+visual studio
+-------------------------------------------
+
+use epr_gui.sln file
+
+note: Some ms compilers do not include stdbool.h and stdint.c in standard headers.
+Minimalist version of these headers are defined in msvc directory (project file use them)
+
+
+
