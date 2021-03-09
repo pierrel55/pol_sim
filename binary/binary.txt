@@ -1,4 +1,9 @@
-prebuild binary
+Executable binaries:
 
 epr_gui.exe is ms windows version
+
 epr_gui_x11 is linux version (64 bits)
+
+For linux version, use ./epr_gui_x11 to execute.
+Tested on linux mint 17/18 and fedora 29
+Can also work on a live cd.
