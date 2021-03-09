@@ -255,12 +255,15 @@ static const struct border_style_t border_style_w1_xp =
   { COL_RGB(0, 0, 0) },
 };
 
+#if 0
+// unused
 static const struct border_style_t border_style_w2 =
 {
   2,
   { COL_RGB(200, 200, 200), COL_RGB(240, 240, 240) },
   { COL_RGB(200, 200, 200), COL_RGB(140, 140, 140) },
 };
+#endif
 
 static const struct border_style_t border_style_w2_xp =
 {
