@@ -1,0 +1,9 @@
+Note: January 8, 2022
+
+This program is an old version of the local method used to simulate the polarizer.
+The new method is described in these two documents.
+https://vixra.org/abs/2201.0019
+https://vixra.org/abs/2201.0032
+
+I left the program here because it give results close to the new method used.
+I will maybe update it in the future.
